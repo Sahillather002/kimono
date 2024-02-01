@@ -1,0 +1,22 @@
+.btn {
+    background-color: var(--button-common-fill);
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.6em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+  .btn:hover {
+    background-color: #5f42cb;
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+  .btn:disabled {
+    background-color: var(--button-common-empty);
+    cursor: not-allowed;
+  }
+  

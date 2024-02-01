@@ -52,3 +52,9 @@
     color: rgba(255, 0, 0, 0.693);
     transition: all 0.4s ease-in-out 0.1s;
 }
+
+@media (max-width: 768px) {
+    .links{
+        font-size: 20px;
+    }
+}

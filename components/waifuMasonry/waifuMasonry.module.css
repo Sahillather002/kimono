@@ -1,0 +1,93 @@
+.gallery {
+  column-count: 3;
+  --webkit-column-count: 3;
+  --moz-column-count: 3;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover{
+  transform: scale(1.03);
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 350px;
+  max-height: 400px;
+  justify-content: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: crimson;
+  cursor: pointer;
+}
+
+.selectedImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.navigator{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  height: 50px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 810px) {
+  .gallery {
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    column-count: 2;
+    --webkit-column-count: 2;
+    --moz-column-count: 2;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .gallery {
+    column-count: 1;
+    --webkit-column-count: 1;
+    --moz-column-count: 1;
+  }
+}

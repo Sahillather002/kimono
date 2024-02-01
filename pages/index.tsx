@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Loading from "@/components/loading";
-import Navigation from "@/components/navigation";
+import animeData from "@/hooks/animeData";
+import { popularAnime } from "@/types/animeType";
 
 
 const Carousel = dynamic(
@@ -8,10 +9,11 @@ const Carousel = dynamic(
   { ssr: false }
 )
 
-export default function Home() {
+
+export default  function Home() {
+
   return (
    <>
-   <Navigation/>
    <Carousel/>
    </>
   );

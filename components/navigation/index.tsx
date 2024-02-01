@@ -1,37 +1,42 @@
 import React from "react";
 import Styles from "./navigation.module.css";
-import Link from "next/link";
-const navigation = () => {
+import useWindowDimensions from "@/hooks/windowDimension";
+
+const Navigation = () => {
+  const {windowWidth} = useWindowDimensions()
+  const handleDonateButton = () => {
+    window.open("https://www.buymeacoffee.com/sahillather002", "_blank");
+  };
+
   return (
-    <header className={`${Styles.navigationHeader}`}>
+    <header className={`${Styles.navigationHeader}`}  style={{ width: windowWidth}}>
       <div className={`${Styles.logo}`}>
         <p>Kimono</p>
       </div>
       <nav>
         <ul className={`${Styles.linksHead}`}>
           <li className={`${Styles.links}`}>
-            <Link href="#">Home</Link>
+            <a href="/">Home</a>
           </li>
           <li className={`${Styles.links}`}>
-            <Link href="#">About</Link>
+            <a href="#">About</a>
           </li>
           <li className={`${Styles.links}`}>
-            <Link href="#">Services</Link>
+            <a href="#">Services</a>
           </li>
           <li className={`${Styles.links}`}>
-            <Link href="#">Portfolio</Link>
+            <a href="#">Portfolio</a>
           </li>
           <li className={`${Styles.links}`}>
-            <Link href="#">Contact</Link>
+            <a href="/waifu">Waifu</a>
           </li>
         </ul>
       </nav>
-      <button className={`${Styles.navButton}`}>
-        <Link href="https://www.buymeacoffee.com/sahillather002" target="_blank">Donate</Link>
+      <button className={`${Styles.navButton}`} onClick={handleDonateButton}>
+        Donate
       </button>
     </header>
   );
 };
-// must contain Search option
 
-export default navigation;
+export default Navigation;

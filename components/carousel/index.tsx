@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./carousel.module.css";
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
+import useWindowDimensions from "@/hooks/windowDimension";
 
 const items = [
   {
@@ -61,19 +62,8 @@ const items = [
   },
 ];
 
-
-
 const Slider = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(getInitialHeight());
-
-  function getInitialHeight() {
-    // Define your media query condition here
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    
-    // Set the initial height based on the condition
-    return isMobile ? window.innerHeight / 2 : window.innerHeight;
-  }
+  const { windowWidth, windowHeight } = useWindowDimensions();
 
   const handlePrev = () => {
     const items = document.querySelectorAll(".item");
@@ -87,22 +77,11 @@ const Slider = () => {
     slider?.append(items[0]);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      
-      // Update the height based on the media query condition
-      setWindowHeight(getInitialHeight());
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div className={Styles.sliderBody} style={{ width: windowWidth, height: windowHeight }}>
+    <div
+      className={Styles.sliderBody}
+      style={{ width: windowWidth, height: windowHeight }}
+    >
       <ul className={`slider`}>
         {items.map((item) => (
           <li
@@ -132,4 +111,3 @@ const Slider = () => {
 };
 
 export default Slider;
-

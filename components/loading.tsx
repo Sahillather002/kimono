@@ -6,8 +6,8 @@ const loading = () => {
       <img
         src={Loaderanime.src}
         alt="loading"
-        width={150}
-        height={150}
+        width={200}
+        height={200}
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
     </div>
