@@ -3,7 +3,7 @@ import { BASE_URL } from "@/utils/constants";
 
 export default function animeData(){
     let api={
-        popular: BASE_URL + "/anime/popular",
+        popular: BASE_URL + "/anime/trending",
     }
 
     async function getPopular(){
