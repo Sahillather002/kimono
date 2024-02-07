@@ -1,6 +1,6 @@
 export let DOMAIN_URL = `${
     process.env.NODE_ENV === "production" ? "https" : "http"
-  }://${process.env.VERCEL_URL}`;
+  }://localhost:3000`;
   
   export let BASE_URL = DOMAIN_URL + "/api";
   export let NEWS_URL = DOMAIN_URL + "/api/news/ann";
