@@ -6,6 +6,8 @@ type WaifuItem = {
   id?: number;
   image_url: string;
   rating?: "safe";
+  is_screenshot?: boolean;
+  image_height?: number;
 };
 
 type Props = {
@@ -15,26 +17,20 @@ type Props = {
 };
 
 const WaifuMasonry = ({ waifuData }: Props) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(25);
   const [displayedItems, setDisplayedItems] = useState<WaifuItem[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [numItemsToShow, setNumItemsToShow] = useState<number>(12);
+  const [imageRowEnd, setImageRowEnd] = useState<number>(0);
 
   useEffect(() => {
     if (waifuData?.items) {
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-
       // Filter items based on the rating
-      const filteredItems = waifuData.items
-        .filter(
-          (item) => item.rating === "safe" || item.rating === "suggestive"
-        )
-        .slice(startIndex, endIndex);
-
-      setDisplayedItems(filteredItems);
+      const filteredItems = waifuData.items.filter((item) => {
+        return item.rating === "safe";
+      });
+      setDisplayedItems(filteredItems.slice(0, numItemsToShow));
     }
-  }, [waifuData, currentPage, itemsPerPage]);
+  }, [waifuData]);
 
   const handleOnClickImage = (imageUrl: string) => {
     setSelectedImage(imageUrl);
@@ -61,36 +57,55 @@ const WaifuMasonry = ({ waifuData }: Props) => {
     }
   };
 
-  return (
-    <div className={`${styles.gallery}`}>
-      {displayedItems.map((item: WaifuItem, index: number) => (
-        <img
-          key={`${item.image_url}_${index}`}
-          src={item.image_url}
-          alt={`Waifu ${index}`}
-          className={styles.image}
-          onClick={() => handleOnClickImage(item.image_url)}
-        />
-      ))}
+  const handleRowEnd = (image_height: number) => {
+    if (image_height < 200) return 20;
+    return 33;
+  };
 
-      {selectedImage && (
-        <div className={styles.modal}>
-          <div className={styles.modalContent}>
-            <span className={styles.close} onClick={handleCloseModal}>
-              &times;
-            </span>
-            <div className={styles.navigator}>
-              <Button className={styles.button} onClick={() => handleNavigate("prev")}>Previous</Button>
-              <img
-                src={selectedImage}
-                alt="Selected Waifu"
-                className={styles.selectedImage}
-              />
-              <Button className={styles.button} onClick={() => handleNavigate("next")}>Next</Button>
+  return (
+    <div>
+      <div className={`${styles.gallery}`}>
+        {displayedItems.map((item: WaifuItem, index: number) => (
+          <span>
+            <img
+              key={`${item.image_url}_${index}`}
+              src={item.image_url}
+              alt={`Waifu ${index}`}
+              className={styles.image}
+              onClick={() => handleOnClickImage(item.image_url)}
+            />
+          </span>
+        ))}
+
+        {selectedImage && (
+          <div className={styles.modal}>
+            <div className={styles.modalContent}>
+              <span className={styles.close} onClick={handleCloseModal}>
+                &times;
+              </span>
+              <div className={styles.navigator}>
+                <Button
+                  className={styles.button}
+                  onClick={() => handleNavigate("prev")}
+                >
+                  Previous
+                </Button>
+                <img
+                  src={selectedImage}
+                  alt="Selected Waifu"
+                  className={styles.selectedImage}
+                />
+                <Button
+                  className={styles.button}
+                  onClick={() => handleNavigate("next")}
+                >
+                  Next
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
