@@ -6,8 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --button-common-fill:#7752FE;
-  --button-common-empty:#C2D9FF;
+  --button-common-fill: #7752fe;
+  --button-common-empty: #c2d9ff;
   --card-width: 280px;
   --card-border-radius: 10px;
   --row-increment: 10px;
@@ -36,4 +36,3 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
