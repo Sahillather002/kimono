@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-import styles from './waifu.module.css';
+import styles from "./waifu.module.css";
 import WaifuMasonry from "@/components/waifuMasonry";
 import Loading from "@/components/loading";
 import fetchWaifu from "../api/getWaifu";
 import Button from "@/components/commons/button/buttons";
 import { waifuDemoData } from "@/components/waifuMasonry/waifuDemoData";
 const Index = () => {
-  const [waifuData, setWaifuData] = useState<{ items: WaifuItem[] } | null>(
-    null
-  );
+  const [waifuData, setWaifuData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,7 +34,7 @@ const Index = () => {
     } catch (error) {
       console.error("Error fetching additional waifu data:", error);
     }
-    console.log(waifuData)
+    console.log(waifuData);
   };
 
   return (
