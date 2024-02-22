@@ -3,15 +3,18 @@ import Styles from "./navigation.module.css";
 import useWindowDimensions from "@/hooks/windowDimension";
 
 const Navigation = () => {
-  const {windowWidth} = useWindowDimensions()
+  const { windowWidth } = useWindowDimensions();
   const handleDonateButton = () => {
     window.open("https://www.buymeacoffee.com/sahillather002", "_blank");
   };
 
   return (
-    <header className={`${Styles.navigationHeader}`}  style={{ width: windowWidth}}>
+    <header
+      className={`${Styles.navigationHeader}`}
+      style={{ width: windowWidth }}
+    >
       <div className={`${Styles.logo}`}>
-        <p>Kimono</p>
+        <a href="/">Kimono</a>
       </div>
       <nav>
         <ul className={`${Styles.linksHead}`}>

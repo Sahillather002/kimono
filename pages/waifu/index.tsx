@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import React, { useState, useEffect } from "react";
 
-import WaifuMasonry from "@/components/waifuMasonry/index";
-import fetchWaifu from "../api/getWaifu";
+import styles from './waifu.module.css';
+import WaifuMasonry from "@/components/waifuMasonry";
 import Loading from "@/components/loading";
+import fetchWaifu from "../api/getWaifu";
+import Button from "@/components/commons/button/buttons";
 import { waifuDemoData } from "@/components/waifuMasonry/waifuDemoData";
-
 const Index = () => {
-  const [waifuData, setWaifuData] = useState<null>(null);
+  const [waifuData, setWaifuData] = useState<{ items: WaifuItem[] } | null>(
+    null
+  );
   const [loading, setLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,42 +27,25 @@ const Index = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      // if the user scrolls down, show the button
-      window.scrollY > 500 ? setIsVisible(true) : setIsVisible(false);
-    };
-    // listen for scroll events
-    window.addEventListener("scroll", toggleVisibility);
-
-    // clear the listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
-
-  // handles the animation when scrolling to the top
-  const scrollToTop = () => {
-    isVisible &&
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+  const handleLoadMoreImages = async () => {
+    try {
+      const additionalData = await fetchWaifu();
+      setWaifuData((prevData) => ({
+        items: [...(prevData?.items || []), ...additionalData.items],
+      }));
+    } catch (error) {
+      console.error("Error fetching additional waifu data:", error);
+    }
+    console.log(waifuData)
   };
+
   return (
     <div>
       {loading && <Loading />}
       {waifuData && !loading && <WaifuMasonry waifuData={waifuData} />}
-      {
-        <button
-          className={`fixed bottom-4 right-4 rounded-full bg-red-300 p-2 outline-none transition-opacity duration-200 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-          onClick={scrollToTop}
-        >
-          <AiOutlineArrowUp />
-        </button>
-      }
+      <div className={`${styles.loadImageButton}`}>
+        <Button onClick={handleLoadMoreImages}>Load More Images</Button>
+      </div>
     </div>
   );
 };

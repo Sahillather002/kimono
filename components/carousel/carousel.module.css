@@ -42,6 +42,12 @@
   border-radius: 0;
   box-shadow: none;
   opacity: 1;
+  filter: drop-shadow(16px 16px 20px red) invert(15%);
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .item:nth-child(3) {
@@ -73,8 +79,11 @@
   display: none;
 }
 .title {
+  color: rgb(228, 67, 67);
   font-family: "arial-black";
   text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .buttonSlider {
@@ -87,6 +96,9 @@
   line-height: 1.7;
   margin: 1rem 0 1.5rem;
   font-size: 0.8rem;
+  max-height: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item:nth-of-type(2) .content {
@@ -140,7 +152,7 @@
   .item {
     width: 130px;
     height: 220px;
-  }     
+  }
   .item:nth-child(3) {
     left: 50%;
   }

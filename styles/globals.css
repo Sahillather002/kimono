@@ -8,6 +8,12 @@
   --background-end-rgb: 255, 255, 255;
   --button-common-fill:#7752FE;
   --button-common-empty:#C2D9FF;
+  --card-width: 280px;
+  --card-border-radius: 10px;
+  --row-increment: 10px;
+  --card-small: 26;
+  --card-medium: 33;
+  --card-large: 45;
 }
 
 @media (prefers-color-scheme: dark) {
