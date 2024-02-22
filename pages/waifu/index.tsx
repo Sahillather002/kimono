@@ -28,7 +28,7 @@ const Index = () => {
   const handleLoadMoreImages = async () => {
     try {
       const additionalData = await fetchWaifu();
-      setWaifuData((prevData) => ({
+      setWaifuData((prevData: any) => ({
         items: [...(prevData?.items || []), ...additionalData.items],
       }));
     } catch (error) {

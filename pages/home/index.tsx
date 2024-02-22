@@ -11,10 +11,10 @@ import "./home.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import AnimeCard from "@/components/anime/animeCard";
-import { demoRecent } from "./demoRecent";
+import { demoRecent } from "../../demoData/demoRecent";
 import TitlePrimary from "@/components/commons/titlePrimary";
-import { demoPopular } from "./demoPopular";
-import { demoFavourite } from "./demoFavourite";
+import { demoPopular } from "../../demoData/demoPopular";
+import { demoFavourite } from "../../demoData/demoFavourite";
 const Carousel = dynamic(() => import("@/components/carousel/index"), {
   ssr: false,
 });
