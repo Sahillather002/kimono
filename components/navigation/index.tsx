@@ -19,16 +19,16 @@ const Navigation = () => {
       <nav>
         <ul className={`${Styles.linksHead}`}>
           <li className={`${Styles.links}`}>
-            <a href="/">Home</a>
+            <a href="/home">Home</a>
           </li>
           <li className={`${Styles.links}`}>
-            <a href="#">About</a>
+            <a href="#">Characters</a>
           </li>
           <li className={`${Styles.links}`}>
-            <a href="#">Services</a>
+            <a href="#">Anime</a>
           </li>
           <li className={`${Styles.links}`}>
-            <a href="#">Portfolio</a>
+            <a href="/Manga">Manga</a>
           </li>
           <li className={`${Styles.links}`}>
             <a href="/waifu">Waifu</a>

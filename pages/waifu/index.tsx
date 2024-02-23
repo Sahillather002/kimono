@@ -6,6 +6,7 @@ import Loading from "@/components/loading";
 import fetchWaifu from "../api/getWaifu";
 import Button from "@/components/commons/button/buttons";
 import { waifuDemoData } from "@/components/waifuMasonry/waifuDemoData";
+
 const Index = () => {
   const [waifuData, setWaifuData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,7 @@ const Index = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = waifuDemoData;
+        const data = await fetchWaifu();
         setWaifuData(data);
       } catch (error) {
         console.error("Error fetching waifu data:", error);
@@ -28,17 +29,20 @@ const Index = () => {
   const handleLoadMoreImages = async () => {
     try {
       const additionalData = await fetchWaifu();
-      setWaifuData((prevData: any) => ({
-        items: [...(prevData?.items || []), ...additionalData.items],
-      }));
+      console.log("Additional Data:", additionalData); // Check the structure and content of additionalData
+      setWaifuData((prevData: any) => {
+        console.log("Previous Data:", prevData); // Check the structure and content of prevData
+        return {
+          items: [...(prevData?.items || []), ...additionalData.items],
+        };
+      });
     } catch (error) {
       console.error("Error fetching additional waifu data:", error);
     }
-    console.log(waifuData);
   };
 
   return (
-    <div>
+    <div className="m-2">
       {loading && <Loading />}
       {waifuData && !loading && <WaifuMasonry waifuData={waifuData} />}
       <div className={`${styles.loadImageButton}`}>

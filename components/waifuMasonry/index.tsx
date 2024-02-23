@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./waifuMasonry.module.css";
 import Button from "../commons/button/buttons";
 
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 type WaifuItem = {
   id?: number;
   image_url: string;
@@ -19,7 +21,7 @@ type Props = {
 const WaifuMasonry = ({ waifuData }: Props) => {
   const [displayedItems, setDisplayedItems] = useState<WaifuItem[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [numItemsToShow, setNumItemsToShow] = useState<number>(12);
+  const [numItemsToShow, setNumItemsToShow] = useState<number>(250);
   const [imageRowEnd, setImageRowEnd] = useState<number>(0);
 
   useEffect(() => {
@@ -64,19 +66,23 @@ const WaifuMasonry = ({ waifuData }: Props) => {
 
   return (
     <div>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}>
+        <Masonry gutter="10px">
+          {displayedItems?.map((item: WaifuItem, index: number) => {
+            return (
+              <span key={`${item.image_url}_${index}`}>
+                <img
+                  src={item.image_url}
+                  alt={`Waifu ${index}`}
+                  className={styles.image}
+                  onClick={() => handleOnClickImage(item.image_url)}
+                />
+              </span>
+            );
+          })}
+        </Masonry>
+      </ResponsiveMasonry>
       <div className={`${styles.gallery}`}>
-        {displayedItems.map((item: WaifuItem, index: number) => (
-          <span>
-            <img
-              key={`${item.image_url}_${index}`}
-              src={item.image_url}
-              alt={`Waifu ${index}`}
-              className={styles.image}
-              onClick={() => handleOnClickImage(item.image_url)}
-            />
-          </span>
-        ))}
-
         {selectedImage && (
           <div className={styles.modal}>
             <div className={styles.modalContent}>
