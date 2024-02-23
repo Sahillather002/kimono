@@ -1,3 +1,4 @@
 .cardImage:hover {
-  opacity: 0.3;
+  filter: brightness(1.2);
+  scale: 1.03;
 }

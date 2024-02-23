@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Styles from "./carousel.module.css";
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
 import useWindowDimensions from "@/hooks/windowDimension";
-import { demoTrendingData } from "./demoTrendingData";
+import { demoTrendingData } from "../../demoData/demoTrendingData";
 
 const Slider = () => {
   const { windowWidth, windowHeight } = useWindowDimensions();
