@@ -42,7 +42,7 @@ const Index = () => {
   };
 
   return (
-    <div className="m-2">
+    <div className="backgroundBlack m-2">
       {loading && <Loading />}
       {waifuData && !loading && <WaifuMasonry waifuData={waifuData} />}
       <div className={`${styles.loadImageButton}`}>

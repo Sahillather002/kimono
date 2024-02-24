@@ -25,7 +25,7 @@ const Navigation = () => {
             <a href="#">Characters</a>
           </li>
           <li className={`${Styles.links}`}>
-            <a href="#">Anime</a>
+            <a href="/topanime">Top Anime</a>
           </li>
           <li className={`${Styles.links}`}>
             <a href="/Manga">Manga</a>
