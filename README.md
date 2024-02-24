@@ -1,3 +1,9 @@
+# Welcome to the Realm of Anime
+
+![image](https://github.com/Sahillather002/kimono/assets/72077931/c50f64d3-7b67-4d0e-a704-ded7fce026b5)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
