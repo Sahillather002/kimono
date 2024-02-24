@@ -24,7 +24,7 @@ import { demoComment } from "@/demoData/demoComment";
 import UpcomingBox from "@/components/upcomingBox/index";
 export default function Home() {
   return (
-    <>
+    <div className="backgroundBlack">
       <SlideBanner tredingAnime={demoTrendingData?.results} />
       <div className="mt-5 container px-4 mb-[50px]">
         <TitlePrimary title="Trending Anime" />
@@ -147,6 +147,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

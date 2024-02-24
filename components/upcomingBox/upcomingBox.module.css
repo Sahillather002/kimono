@@ -1,13 +1,19 @@
-.tooltip {
+.hoverImg {
+  pointer-events: none;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  width: 34vw;
+  height: 34vw;
 }
-.tooltip img {
-  max-width: 200px; /* Adjust as needed */
+.hoverImg img {
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.hoverImg img {
+  opacity: 1;
 }

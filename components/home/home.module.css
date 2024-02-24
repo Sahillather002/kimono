@@ -21,6 +21,7 @@
   font-style: italic;
   text-align: center;
   padding-bottom: 20px;
+  display: flex;
 }
 .homePara {
   text-align: center;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ShowCaseItem from "./showCaseItem";
 import { Anime } from "@/types/animeType";
 import "./upcomingBox.module.css";
-
+import styles from "./upcomingBox.module.css";
 type Props = {
   title: string;
   anime: Anime[];
@@ -24,8 +24,12 @@ const BoxShowCase: React.FC<Props> = ({ title, anime }: Props) => {
     setTooltipPosition({ x: event.clientX, y: event.clientY });
   };
 
+  console.log(tooltipPosition);
   return (
-    <div className="rounded-md overflow-hidden" onMouseMove={handleMouseMove}>
+    <div
+      className={` rounded-md overflow-hidden`}
+      onMouseMove={handleMouseMove}
+    >
       <h3 className="font-semibold text-[16px] text-primary bg-[#222] p-3">
         {title}
       </h3>
@@ -48,18 +52,18 @@ const BoxShowCase: React.FC<Props> = ({ title, anime }: Props) => {
           </div>
         ))}
       </div>
-      {hoveredItem && (
-        <div
-          className="tooltip"
-          style={{
-            position: "absolute",
-            top: tooltipPosition.y,
-            left: tooltipPosition.x,
-          }}
-        >
-          <img src={hoveredItem.image} alt={hoveredItem.title.english} />
+      {/* {hoveredItem && (
+        <div className={styles.hoverImg}>
+          <img
+            src={hoveredItem.image}
+            alt={hoveredItem.title.english}
+            style={{
+              top: tooltipPosition.y,
+              left: tooltipPosition.x,
+            }}
+          />
         </div>
-      )}
+      )} */}
     </div>
   );
 };

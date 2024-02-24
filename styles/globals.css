@@ -14,6 +14,8 @@
   --card-small: 26;
   --card-medium: 33;
   --card-large: 45;
+  --white-color: #fff;
+  --black-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +30,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.backgroundBlack {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -35,6 +40,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+img {
+  object-fit: cover;
+}
+
+span {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .banner::after,
