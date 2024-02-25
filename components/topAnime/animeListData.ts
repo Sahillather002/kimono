@@ -70,7 +70,7 @@ export const animeListData = [
     genre: "Adventure, Fantasy comedy, Martial arts",
     redirectLink: "",
     imdbLink: "https://www.imdb.com/title/tt0409591/",
-    imgUrl: "https://www.yudiz.com/codepen/hover-reveal/naruto.jpg",
+    imgUrl: "/naruto.jpg",
   },
   {
     index: 9,

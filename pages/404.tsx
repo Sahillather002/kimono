@@ -1,11 +1,11 @@
-import React from 'react'
-import ErrorComponent from '@/components/error'
+import React from "react";
+import ErrorComponent from "@/components/error";
 const index = () => {
   return (
     <div>
-      <ErrorComponent/>
+      <ErrorComponent />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
