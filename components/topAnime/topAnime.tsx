@@ -106,11 +106,8 @@ const TopAnime = () => {
         <div className={`${styles.ball} ball`}></div>
 
         <div className={styles.videoContainer}>
-          <video playsInline autoPlay muted loop>
-            <source
-              src="https://www.yudiz.com/codepen/hover-reveal/amv.mp4"
-              type="video/mp4"
-            />
+          <video width={"100%"} playsInline autoPlay muted loop>
+            <source src="/amv.mp4" type="video/mp4" />
           </video>
         </div>
 

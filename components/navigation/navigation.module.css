@@ -53,6 +53,41 @@
   transition: all 0.4s ease-in-out 0.1s;
 }
 
+.profileMenu {
+  height: 50px;
+  width: 50px;
+}
+.profilePicture {
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.profileMenu:hover .dropdownContent {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdownContent {
+  width: 100px;
+  background-color: rgba(233, 96, 96, 0.742);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.listItem {
+  width: 100%;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .links {
     font-size: 20px;
