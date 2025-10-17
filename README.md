@@ -43,23 +43,54 @@ This scaffold provides a robust foundation built with:
 ## 📸 Screenshots
 
 <div align="center">
-  <strong>🎬 Kimono - Your Ultimate Anime Platform</strong>
+  <h3>🎬 Kimono - Your Ultimate Anime Platform</h3>
 </div>
 
-<div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
-
-| 🎯 Home Page | 🔍 Browse Page | 🏆 Rankings | 📅 Seasonal |
-|:---:|:---:|:---:|:---:|
-| ![Home Page](screenshots/home.png) | ![Browse Page](screenshots/browse.png) | ![Rankings](screenshots/rankings.png) | ![Seasonal](screenshots/seasonal.png) |
-
-| ✨ Discover | 🎨 Genres | 📝 My List | 🔐 Authentication |
-|:---:|:---:|:---:|:---:|
-| ![Discover](screenshots/discover.png) | ![Genres](screenshots/genres.png) | ![My List](screenshots/my-list.png) | ![Auth](screenshots/auth.png) |
-
-</div>
+<table>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/home.png" alt="Home Page" width="100%"/>
+      <p align="center"><strong>🎯 Home Page</strong><br/>Beautiful landing page with trending anime</p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/browse.png" alt="Browse Page" width="100%"/>
+      <p align="center"><strong>🔍 Browse Page</strong><br/>Advanced search and filtering system</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/rankings.png" alt="Rankings" width="100%"/>
+      <p align="center"><strong>🏆 Rankings</strong><br/>Top-rated anime across all categories</p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/seasonal.png" alt="Seasonal" width="100%"/>
+      <p align="center"><strong>📅 Seasonal</strong><br/>Current season anime releases</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/discover.png" alt="Discover" width="100%"/>
+      <p align="center"><strong>✨ Discover</strong><br/>Random anime recommendations</p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/genres.png" alt="Genres" width="100%"/>
+      <p align="center"><strong>🎨 Genres</strong><br/>Browse by anime categories</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/my-list.png" alt="My List" width="100%"/>
+      <p align="center"><strong>📝 My List</strong><br/>Personal anime collection</p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/auth.png" alt="Authentication" width="100%"/>
+      <p align="center"><strong>🔐 Authentication</strong><br/>Secure sign in/up system</p>
+    </td>
+  </tr>
+</table>
 
 <div align="center">
-  <p><em>Swipe left/right or scroll horizontally to see all screenshots →</em></p>
+  <p><em>✨ Explore all the amazing features of Kimono anime platform</em></p>
 </div>
 
 ---
