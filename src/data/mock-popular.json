@@ -1,0 +1,119 @@
+[
+  {
+    "id": "4",
+    "title": {
+      "english": "Death Note",
+      "romaji": "Death Note",
+      "native": "デスノート"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/9/9453.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/9/9453.jpg",
+    "type": "TV",
+    "rating": "R-17",
+    "year": 2006,
+    "status": "FINISHED",
+    "description": "A shinigami, as a god of death, can kill any person—provided they see their victim's face and write their victim's name in a notebook called a Death Note.",
+    "genres": ["Psychological", "Thriller", "Mystery", "Police", "Supernatural"],
+    "totalEpisodes": 37,
+    "studios": ["Madhouse"],
+    "source": "Manga",
+    "duration": 23,
+    "averageScore": 9.0,
+    "popularity": 2800000,
+    "favorites": 220000
+  },
+  {
+    "id": "5",
+    "title": {
+      "english": "Steins;Gate",
+      "romaji": "Steins;Gate",
+      "native": "シュタインズ・ゲート"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/5/78745.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/5/78745.jpg",
+    "type": "TV",
+    "rating": "PG-13",
+    "year": 2011,
+    "status": "FINISHED",
+    "description": "The self-proclaimed mad scientist Rintarou Okabe rents out a room in a rickety old building in Akihabara, where he indulges himself in his hobby of inventing prospective 'future gadgets' with fellow lab members.",
+    "genres": ["Sci-Fi", "Psychological", "Thriller", "Drama"],
+    "totalEpisodes": 24,
+    "studios": ["White Fox"],
+    "source": "Visual Novel",
+    "duration": 24,
+    "averageScore": 8.8,
+    "popularity": 2400000,
+    "favorites": 180000
+  },
+  {
+    "id": "6",
+    "title": {
+      "english": "Fullmetal Alchemist: Brotherhood",
+      "romaji": "Fullmetal Alchemist: Brotherhood",
+      "native": "鋼の錬金術師 FULLMETAL ALCHEMIST"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/1208/94745.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/1208/94745.jpg",
+    "type": "TV",
+    "rating": "R-17",
+    "year": 2009,
+    "status": "FINISHED",
+    "description": "After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality.",
+    "genres": ["Action", "Adventure", "Drama", "Fantasy"],
+    "totalEpisodes": 64,
+    "studios": ["Bones"],
+    "source": "Manga",
+    "duration": 24,
+    "averageScore": 9.1,
+    "popularity": 2600000,
+    "favorites": 200000
+  },
+  {
+    "id": "7",
+    "title": {
+      "english": "One Piece",
+      "romaji": "One Piece",
+      "native": "ワンピース"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
+    "type": "TV",
+    "rating": "PG-13",
+    "year": 1999,
+    "status": "ONGOING",
+    "description": "Gol D. Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world.",
+    "genres": ["Action", "Adventure", "Comedy", "Drama"],
+    "totalEpisodes": 1089,
+    "currentEpisode": 1089,
+    "studios": ["Toei Animation"],
+    "source": "Manga",
+    "duration": 24,
+    "averageScore": 8.8,
+    "popularity": 3200000,
+    "favorites": 280000
+  },
+  {
+    "id": "8",
+    "title": {
+      "english": "My Hero Academia",
+      "romaji": "Boku no Hero Academia",
+      "native": "僕のヒーローアカデミア"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/10/78745.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/10/78745.jpg",
+    "type": "TV",
+    "rating": "PG-13",
+    "year": 2016,
+    "status": "ONGOING",
+    "description": "The appearance of 'quirks', newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting.",
+    "genres": ["Action", "School", "Shounen", "Super Power"],
+    "totalEpisodes": 138,
+    "currentEpisode": 138,
+    "studios": ["Bones"],
+    "source": "Manga",
+    "duration": 24,
+    "averageScore": 8.5,
+    "popularity": 2200000,
+    "favorites": 140000
+  }
+]

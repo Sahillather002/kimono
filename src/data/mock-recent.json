@@ -1,0 +1,77 @@
+[
+  {
+    "id": "9",
+    "title": {
+      "english": "Frieren: Beyond Journey's End",
+      "romaji": "Sousou no Frieren",
+      "native": "葬送のフリーレン"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/1765/138885.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/1765/138885.jpg",
+    "type": "TV",
+    "rating": "PG-13",
+    "year": 2023,
+    "status": "FINISHED",
+    "description": "After the party of heroes defeated the Demon King, they restored peace to the land and returned to lives of solitude.",
+    "genres": ["Adventure", "Drama", "Fantasy"],
+    "totalEpisodes": 28,
+    "currentEpisode": 28,
+    "season": "Fall 2023",
+    "studios": ["Madhouse"],
+    "source": "Manga",
+    "duration": 24,
+    "averageScore": 9.1,
+    "popularity": 800000,
+    "favorites": 60000
+  },
+  {
+    "id": "10",
+    "title": {
+      "english": "The Apothecary Diaries",
+      "romaji": "Kusuriya no Hitorigoto",
+      "native": "薬屋のひとりごと"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/1790/139999.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/1790/139999.jpg",
+    "type": "TV",
+    "rating": "PG-13",
+    "year": 2023,
+    "status": "FINISHED",
+    "description": "In the imperial court, a young woman named Maomao is kidnapped and sold to the inner palace. She keeps her head down, does her job, and tries to avoid any trouble.",
+    "genres": ["Mystery", "Historical", "Drama"],
+    "totalEpisodes": 24,
+    "currentEpisode": 24,
+    "season": "Fall 2023",
+    "studios": ["TOHO animation", "OLM"],
+    "source": "Light Novel",
+    "duration": 24,
+    "averageScore": 8.6,
+    "popularity": 600000,
+    "favorites": 45000
+  },
+  {
+    "id": "11",
+    "title": {
+      "english": "Solo Leveling",
+      "romaji": "Ore dake Level Up na Ken",
+      "native": "나 혼자만 레벨업"
+    },
+    "image": "https://cdn.myanimelist.net/images/anime/1765/138885.jpg",
+    "banner": "https://cdn.myanimelist.net/images/anime/1765/138885.jpg",
+    "type": "TV",
+    "rating": "R-17",
+    "year": 2024,
+    "status": "ONGOING",
+    "description": "In a world where hunters with superpowers battle deadly monsters, the weakest hunter Sung Jinwoo gains a unique power that allows him to level up.",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "totalEpisodes": 12,
+    "currentEpisode": 7,
+    "season": "Winter 2024",
+    "studios": ["A-1 Pictures"],
+    "source": "Web Novel",
+    "duration": 24,
+    "averageScore": 8.3,
+    "popularity": 1200000,
+    "favorites": 80000
+  }
+]
