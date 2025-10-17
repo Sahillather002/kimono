@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { Search, Filter, X, Grid, List } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -17,13 +17,13 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { Anime, SearchFilters } from "@/types/anime"
 
 const genres = [
-  "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", 
+  "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery",
   "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Thriller"
 ]
 
 const years = Array.from({ length: 30 }, (_, i) => new Date().getFullYear() - i)
 
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams()
   const [searchQuery, setSearchQuery] = useState(searchParams?.get("q") || "")
   const [searchResults, setSearchResults] = useState<Anime[]>([])
@@ -99,7 +99,7 @@ export default function SearchPage() {
       <div className="space-y-6 mb-8">
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
           <h1 className="text-3xl font-bold">Browse Anime</h1>
-          
+
           {/* View Mode Toggle */}
           <div className="flex items-center space-x-2">
             <Button
@@ -245,7 +245,7 @@ export default function SearchPage() {
                         <Checkbox
                           id={genre}
                           checked={filters.genre === genre}
-                          onCheckedChange={(checked) => 
+                          onCheckedChange={(checked) =>
                             handleFilterChange("genre", checked ? genre : "")
                           }
                         />
@@ -296,8 +296,8 @@ export default function SearchPage() {
                 return (
                   <Badge key={key} variant="secondary" className="gap-1">
                     {key}: {value.toString()}
-                    <X 
-                      className="w-3 h-3 cursor-pointer" 
+                    <X
+                      className="w-3 h-3 cursor-pointer"
                       onClick={() => handleFilterChange(key as keyof SearchFilters, "")}
                     />
                   </Badge>
@@ -328,7 +328,7 @@ export default function SearchPage() {
               {searchQuery && ` for "${searchQuery}"`}
             </p>
             <div className={
-              viewMode === "grid" 
+              viewMode === "grid"
                 ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
                 : "space-y-4"
             }>
@@ -382,5 +382,33 @@ export default function SearchPage() {
         )}
       </div>
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={
+      <div className="container mx-auto px-4 py-16">
+        <div className="space-y-6 mb-8">
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold">Browse Anime</h1>
+          </div>
+          <div className="relative">
+            <div className="h-12 bg-muted rounded-md animate-pulse"></div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className="space-y-2">
+              <div className="aspect-[3/4] bg-muted rounded-md animate-pulse"></div>
+              <div className="h-4 bg-muted rounded animate-pulse"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    }>
+      <SearchPageContent />
+    </Suspense>
   )
 }
