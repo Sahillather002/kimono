@@ -80,35 +80,35 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded-md hover:bg-muted/50"
               >
                 <item.icon className="w-4 h-4" />
-                <span>{item.name}</span>
+                <span className="whitespace-nowrap">{item.name}</span>
               </Link>
             ))}
           </nav>
 
           {/* Search Bar */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 mr-2">
             <form onSubmit={handleSearch} className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 type="search"
                 placeholder="Search anime..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 w-64 bg-muted/50 border-muted focus:border-red-500 focus:ring-red-500"
+                className="pl-9 w-56 bg-muted/50 border-muted focus:border-red-500 focus:ring-red-500"
               />
             </form>
           </div>
 
           {/* User Menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

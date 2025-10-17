@@ -53,7 +53,7 @@ export default function RankingsPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 mb-4">
             <Trophy className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
             Top Rankings
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -63,26 +63,26 @@ export default function RankingsPage() {
 
         {/* Rankings Tabs */}
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-5 h-14">
-            <TabsTrigger value="all" className="flex-col gap-1">
-              <Trophy className="w-4 h-4" />
-              <span className="text-xs">All Time</span>
+          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 h-16 gap-2">
+            <TabsTrigger value="all" className="flex-col gap-2 px-3 py-2">
+              <Trophy className="w-5 h-5" />
+              <span className="text-sm font-medium">All Time</span>
             </TabsTrigger>
-            <TabsTrigger value="airing" className="flex-col gap-1">
-              <TrendingUp className="w-4 h-4" />
-              <span className="text-xs">Airing</span>
+            <TabsTrigger value="airing" className="flex-col gap-2 px-3 py-2">
+              <TrendingUp className="w-5 h-5" />
+              <span className="text-sm font-medium">Airing</span>
             </TabsTrigger>
-            <TabsTrigger value="upcoming" className="flex-col gap-1">
-              <Star className="w-4 h-4" />
-              <span className="text-xs">Upcoming</span>
+            <TabsTrigger value="upcoming" className="flex-col gap-2 px-3 py-2">
+              <Star className="w-5 h-5" />
+              <span className="text-sm font-medium">Upcoming</span>
             </TabsTrigger>
-            <TabsTrigger value="movies" className="flex-col gap-1">
-              <Award className="w-4 h-4" />
-              <span className="text-xs">Movies</span>
+            <TabsTrigger value="movies" className="flex-col gap-2 px-3 py-2">
+              <Award className="w-5 h-5" />
+              <span className="text-sm font-medium">Movies</span>
             </TabsTrigger>
-            <TabsTrigger value="popular" className="flex-col gap-1">
-              <Heart className="w-4 h-4" />
-              <span className="text-xs">Popular</span>
+            <TabsTrigger value="popular" className="flex-col gap-2 px-3 py-2">
+              <Heart className="w-5 h-5" />
+              <span className="text-sm font-medium">Popular</span>
             </TabsTrigger>
           </TabsList>
 

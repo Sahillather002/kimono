@@ -40,6 +40,30 @@ This scaffold provides a robust foundation built with:
 - **🌍 Next Intl** - Internationalization library for Next.js
 - **📅 Date-fns** - Modern JavaScript date utility library
 
+## 📸 Screenshots
+
+<div align="center">
+  <strong>🎬 Kimono - Your Ultimate Anime Platform</strong>
+</div>
+
+<div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
+
+| 🎯 Home Page | 🔍 Browse Page | 🏆 Rankings | 📅 Seasonal |
+|:---:|:---:|:---:|:---:|
+| ![Home Page](screenshots/home.png) | ![Browse Page](screenshots/browse.png) | ![Rankings](screenshots/rankings.png) | ![Seasonal](screenshots/seasonal.png) |
+
+| ✨ Discover | 🎨 Genres | 📝 My List | 🔐 Authentication |
+|:---:|:---:|:---:|:---:|
+| ![Discover](screenshots/discover.png) | ![Genres](screenshots/genres.png) | ![My List](screenshots/my-list.png) | ![Auth](screenshots/auth.png) |
+
+</div>
+
+<div align="center">
+  <p><em>Swipe left/right or scroll horizontally to see all screenshots →</em></p>
+</div>
+
+---
+
 ## 🎯 Development
 
 This project is built with modern web technologies and follows best practices for:
