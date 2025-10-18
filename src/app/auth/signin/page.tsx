@@ -85,11 +85,15 @@ export default function SignInPage() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <Tv className="w-7 h-7 text-white" />
+          <div className="w-12 h-12 mx-auto mb-4">
+            <img
+              src="/kimono-logo.svg"
+              alt="Kimono Logo"
+              className="w-full h-full"
+            />
           </div>
           <CardTitle>Welcome Back</CardTitle>
-          <CardDescription>Sign in to your AnimeStream account</CardDescription>
+          <CardDescription>Sign in to your Kimono account</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

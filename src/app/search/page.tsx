@@ -16,6 +16,9 @@ import { AnimeCard } from "@/components/anime-card"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Anime, SearchFilters } from "@/types/anime"
 
+// Force dynamic rendering for this page since it depends on external APIs
+export const dynamic = 'force-dynamic'
+
 const genres = [
   "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery",
   "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Thriller"

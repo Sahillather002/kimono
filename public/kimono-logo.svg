@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="22" fill="url(#gradient)" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Main character silhouette -->
+  <path d="M18 14c0-2 1-4 3-4s3 2 3 4v6l2 8c1 4 2 6 2 8 0 2-1 3-3 3h-6c-2 0-3-1-3-3 0-2 1-4 2-8l2-8v-6z" fill="#fbbf24"/>
+
+  <!-- Character face -->
+  <circle cx="21" cy="18" r="2" fill="#1f2937"/>
+  <circle cx="27" cy="18" r="2" fill="#1f2937"/>
+
+  <!-- Hair -->
+  <path d="M15 12c2-3 4-4 6-4s4 1 6 4" stroke="#1f2937" stroke-width="2" fill="none"/>
+
+  <!-- Kimono pattern -->
+  <path d="M20 22h8v2h-8z" fill="#dc2626"/>
+  <path d="M20 26h8v2h-8z" fill="#dc2626"/>
+  <path d="M20 30h8v2h-8z" fill="#dc2626"/>
+
+  <!-- Sword -->
+  <path d="M32 20l6-2v8l-6-2v-4z" fill="#6b7280"/>
+  <path d="M36 22h4" stroke="#374151" stroke-width="1"/>
+
+  <!-- Text "K" -->
+  <text x="38" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">K</text>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#374151"/>
+    </linearGradient>
+  </defs>
+</svg>

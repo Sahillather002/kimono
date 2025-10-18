@@ -17,24 +17,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AnimeStream - Watch Anime Online",
-  description: "Stream your favorite anime shows and movies online in HD quality. Discover trending anime, browse by genre, and watch the latest episodes.",
-  keywords: ["anime", "streaming", "watch anime", "anime online", "HD anime"],
-  authors: [{ name: "AnimeStream Team" }],
+  title: "Kimono - Your Ultimate Anime Platform",
+  description: "Discover, watch, and track your favorite anime shows and movies. Browse by genre, get recommendations, and build your personal anime collection.",
+  keywords: ["anime", "kimono", "anime platform", "watch anime", "anime online", "anime collection"],
+  authors: [{ name: "Kimono Team" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "AnimeStream - Watch Anime Online",
-    description: "Stream your favorite anime shows and movies online in HD quality",
-    url: "https://animestream.com",
-    siteName: "AnimeStream",
+    title: "Kimono - Your Ultimate Anime Platform",
+    description: "Discover, watch, and track your favorite anime shows and movies",
+    url: "https://kimono-anime.com",
+    siteName: "Kimono",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AnimeStream - Watch Anime Online",
-    description: "Stream your favorite anime shows and movies online in HD quality",
+    title: "Kimono - Your Ultimate Anime Platform",
+    description: "Discover, watch, and track your favorite anime shows and movies",
   },
 };
 
