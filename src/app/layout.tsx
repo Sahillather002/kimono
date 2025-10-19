@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   keywords: ["anime", "kimono", "anime platform", "watch anime", "anime online", "anime collection"],
   authors: [{ name: "Kimono Team" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/kimono-logo.svg",
   },
   openGraph: {
     title: "Kimono - Your Ultimate Anime Platform",
